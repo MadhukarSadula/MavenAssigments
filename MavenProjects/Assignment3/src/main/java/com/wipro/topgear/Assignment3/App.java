@@ -23,7 +23,7 @@ public class App
     public void connectionDB() throws SQLException,ClassNotFoundException, InstantiationException, IllegalAccessException
     {
     	 //String dburl="jdbc.derby:myDB;create=true";
-        String dburl = "jdbc:derby:myDB;create=true";
+        String dburl = "jdbc:derby:/Assignment3/myDB;create=true";
         
     	//String driver="org.apache.derby.jdbc.EmbeddedDriver";
         // Class.forName(driver);
@@ -36,7 +36,7 @@ public class App
     	Statement stmt=conn.createStatement(); 
     	System.out.println("Creating table");
     	
-    	String sql = "CREATE table USERS(id INTEGER ,name VARCHAR(25));";
+    	String sql = "CREATE table USERS(id INTEGER ,name VARCHAR(25))";
         stmt.execute(sql);
         
         System.out.println("inserting data");
